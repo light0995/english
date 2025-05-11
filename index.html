@@ -15,26 +15,39 @@
     </header>
 
     <section class="about">
+        <!-- <img src="./img/bachelor.png" alt="bachelor">
+        <img src="./img/masters.png" alt="masters"> -->
         <div class="about-content">
             <div class="about-text">
-                <h2>Обо мне</h2>
+                <h2 class="title about__title">Обо мне</h2>
                 <div class="about-item">
                     <i class="fas fa-graduation-cap"></i>
                     <div>
-                        <h3>Образование</h3>
+                        <h3 class="subtitle">Образование</h3>
                         <ul class="education__list-items">
                             <li class="education__list-item">
-                                <p class="education__list-descr"> Лингвистический университет, степень бакалавра <br>(ПГЛУ)</p>
-                                <!-- <img src="./test.JPEG" alt="bachelor" class="education__img"> -->
+                                <p class="education__list-descr"> Лингвистический университет <br>степень <span>бакалавра</span> <br>(ПГЛУ)</p>
+                                <div class="education__img-wrapper">
+                                    <button class="btn education__img-close"><img src="./icons/close-btn.svg" alt="close"></button>
+                                    <img src="./img/masters.png" alt="bachelor">
+                                </div>
+
                                 <button class="btn education__btn">Посмотреть</button>
                             </li>
                             <li class="education__list-item">
-                                <p class="education__list-descr"> Педагогический факультет, специальность педагог. Степень магистра </p>
+                                <p class="education__list-descr"> Педагогический факультет <br>Специальность <span>педагог</span><br> Степень <span>магистра</span> </p>
                                 <button class="btn education__btn">Посмотреть</button>
+                                <div class="education__img-wrapper">
+                                    <button class="btn education__img-close"><img src="./icons/close-btn.svg" alt="close"></button>
+                                    <img src="./img/masters.png" alt="masters">
+                                </div>
                             </li>
                             <li class="education__list-item"> 
-                                <p class="education__list-descr"> Международный сертификат TESOL <br>(позволяющий преподавать английский как второй язык)</p>
+                                <p class="education__list-descr"> Международный <span>сертификат</span>  <br>(позволяющий преподавать <span>английский как второй язык</span>)</p>
                                 <button class="btn education__btn">Посмотреть</button>
+                                <div class="education__img-wrapper">
+                                    <button class="btn education__img-close"><img src="./icons/close-btn.svg" alt="close"></button>
+                                </div>
                             </li>
                         </ul>
                         
@@ -59,7 +72,7 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://via.placeholder.com/300" alt="Фото преподавателя"> <!-- Замените на своё фото -->
+                <!-- <img src="https://via.placeholder.com/300" alt="Фото преподавателя">  -->
             </div>
         </div>
     </section>
@@ -76,5 +89,13 @@
     <footer>
         <p>© 2024 Английский с [Ваше Имя]. Все права защищены.</p>
     </footer>
+
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
