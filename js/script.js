@@ -4,6 +4,12 @@ const educationBtns = document.querySelectorAll('.education__btn');
 const overlay = document.querySelector('.overlay');
 const educationImg = document.querySelectorAll('.education__img-wrapper');
 const closeBtn = document.querySelectorAll('.education__img-close');
+const leftBtn = document.querySelector('.left__btn');
+const rightBtn = document.querySelector('.right__btn');
+const width = +getComputedStyle(document.querySelector('.work__photos')).width.replace(/px/, '');
+const carouselItems = document.querySelectorAll('.carousel__item');
+const carouselWrapper = document.querySelector('.carousel__wrapper');
+let offset = 0;
 
 
 function showEducation () {
@@ -34,6 +40,29 @@ function closeEducation () {
         }
     });
 };
+
+
+leftBtn.addEventListener('click', () => {
+    if (offset === 0) {
+        offset = width * (carouselItems.length - 1);
+    } else {
+        offset -= width;
+    }
+    carouselWrapper.style.transform = `translateX(-${offset}px)`;
+});
+
+rightBtn.addEventListener('click', () => {
+    
+    if (offset === width * (carouselItems.length - 1)) {
+        offset = 0;
+    } else {
+        offset += width;
+    }
+    carouselWrapper.style.transform = `translateX(-${offset}px)`
+
+
+});
+
 
 showEducation();
 closeEducation();

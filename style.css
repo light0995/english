@@ -197,6 +197,9 @@ h3 {
 
 .left__btn,
 .right__btn {
+  z-index: 10;
+  border: none;
+  cursor: pointer;
   width: 50px;
   height: 50px;
   background-color: #6e48aa;
@@ -236,7 +239,7 @@ h3 {
 }
 
 .right__btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   left: 20px;
@@ -247,7 +250,7 @@ h3 {
 }
 
 .right__btn::after {
-    content: "";
+  content: "";
   position: absolute;
   top: 31px;
   left: 20px;
@@ -260,6 +263,11 @@ h3 {
 .carousel__wrapper {
   display: flex;
   width: 500%;
+  transition: 0.5s all;
+}
+
+.carousel__item {
+  width: 720px;
 }
 
 .carousel__item img {
