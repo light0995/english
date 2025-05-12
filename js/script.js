@@ -10,7 +10,9 @@ const width = +getComputedStyle(document.querySelector('.work__photos')).width.r
 const carouselItems = document.querySelectorAll('.carousel__item');
 const carouselWrapper = document.querySelector('.carousel__wrapper');
 let offset = 0;
-
+const timerId = setInterval(() => {
+    nextSlide();
+}, 5000);
 
 function showEducation () {
     educationBtns.forEach((btn, index) => {
@@ -42,17 +44,7 @@ function closeEducation () {
 };
 
 
-leftBtn.addEventListener('click', () => {
-    if (offset === 0) {
-        offset = width * (carouselItems.length - 1);
-    } else {
-        offset -= width;
-    }
-    carouselWrapper.style.transform = `translateX(-${offset}px)`;
-});
-
-rightBtn.addEventListener('click', () => {
-    
+function nextSlide () {
     if (offset === width * (carouselItems.length - 1)) {
         offset = 0;
     } else {
@@ -60,8 +52,38 @@ rightBtn.addEventListener('click', () => {
     }
     carouselWrapper.style.transform = `translateX(-${offset}px)`
 
+};
 
+function prevSlide () {
+    if (offset === 0) {
+        offset = width * (carouselItems.length - 1);
+    } else {
+        offset -= width;
+    }
+    carouselWrapper.style.transform = `translateX(-${offset}px)`;
+
+};
+
+
+leftBtn.addEventListener('click', () => {
+    clearInterval(timerId);
+    prevSlide();
 });
+
+rightBtn.addEventListener('click', () => {
+    clearInterval(timerId);
+    nextSlide();
+});
+
+
+
+
+
+
+
+
+
+
 
 
 showEducation();
