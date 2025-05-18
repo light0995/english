@@ -13,6 +13,8 @@ let offset = 0;
 const timerId = setInterval(() => {
     nextSlide();
 }, 5000);
+const modal = document.querySelector('.modal');
+const modalToggle = document.querySelector('.action__btn');
 
 function showEducation () {
     educationBtns.forEach((btn, index) => {
@@ -65,6 +67,16 @@ function prevSlide () {
 };
 
 
+modalToggle.addEventListener('click', () => {
+    modal.classList.add('modal__active');
+    overlay.classList.add('overlay__active');
+
+
+});
+
+
+
+
 leftBtn.addEventListener('click', () => {
     clearInterval(timerId);
     prevSlide();
@@ -74,6 +86,9 @@ rightBtn.addEventListener('click', () => {
     clearInterval(timerId);
     nextSlide();
 });
+
+
+
 
 
 

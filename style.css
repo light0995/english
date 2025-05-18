@@ -19,6 +19,9 @@ header h1 {
   font-size: 52px;
 }
 
+
+
+
 h3 {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -310,6 +313,74 @@ h3 {
 .social-links i {
   margin-right: 8px;
 }
+
+
+.action__btn {
+  width: 700px;
+  height: 100px;
+  font-size: 22px;
+  background-color: #6e48aa;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 750px;
+  right: -390px;
+}
+
+
+.modal {
+  border-radius: 100px;
+  background: linear-gradient(135deg, #6e48aa, #9d50bb);
+  text-align: center;
+  min-height: 550px;
+  width: 920px;
+  padding-top: 15px;
+  position: fixed;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+}
+
+.modal__active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+
+
+.modal__title {
+  font-size: 42px;
+  line-height: 50px;
+ }
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  margin: 0 auto;
+}
+
+.modal__form input {
+  margin-top: 20px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e9e9e9;
+  font-size: 18px;
+}
+
+.modal__btn {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #fff;
+}
+
+
 
 /* Подвал */
 footer {
