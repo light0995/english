@@ -15,6 +15,7 @@ const timerId = setInterval(() => {
 }, 5000);
 const modal = document.querySelector('.modal');
 const modalToggle = document.querySelector('.action__btn');
+const modalClose = document.querySelector('.modal__close');
 
 function showEducation () {
     educationBtns.forEach((btn, index) => {
@@ -35,12 +36,13 @@ function closeEducation () {
     overlay.addEventListener('click', () => {
         overlay.classList.remove('overlay__active');
         educationImg.forEach(item => item.classList.remove('education__img-wrapper-active'));
-    
+        closeModal();
     });
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             overlay.classList.remove('overlay__active');
             educationImg.forEach(item => item.classList.remove('education__img-wrapper-active'));
+            closeModal();
         }
     });
 };
@@ -66,14 +68,16 @@ function prevSlide () {
 
 };
 
-
-modalToggle.addEventListener('click', () => {
+function openModal () {
     modal.classList.add('modal__active');
     overlay.classList.add('overlay__active');
+}
 
 
-});
-
+function closeModal () {
+    modal.classList.remove('modal__active');
+    overlay.classList.remove('overlay__active');
+}
 
 
 
@@ -88,16 +92,13 @@ rightBtn.addEventListener('click', () => {
 });
 
 
+modalToggle.addEventListener('click', () => {
+    openModal();
+});
 
-
-
-
-
-
-
-
-
-
+modalClose.addEventListener('click', () => {
+    closeModal();
+});
 
 
 
