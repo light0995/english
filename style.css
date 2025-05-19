@@ -197,7 +197,7 @@ h3 {
 
 .left__btn,
 .right__btn {
-  z-index: 10;
+  z-index: 2;
   border: none;
   cursor: pointer;
   width: 50px;
